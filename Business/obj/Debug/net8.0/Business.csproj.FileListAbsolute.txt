@@ -1,0 +1,16 @@
+E:\FA25\git1\NguyenNguyenNgu_AS02_PRN212\Business\bin\Debug\net8.0\Business.deps.json
+E:\FA25\git1\NguyenNguyenNgu_AS02_PRN212\Business\bin\Debug\net8.0\Business.dll
+E:\FA25\git1\NguyenNguyenNgu_AS02_PRN212\Business\bin\Debug\net8.0\Business.pdb
+E:\FA25\git1\NguyenNguyenNgu_AS02_PRN212\Business\bin\Debug\net8.0\Data.dll
+E:\FA25\git1\NguyenNguyenNgu_AS02_PRN212\Business\bin\Debug\net8.0\Data.pdb
+E:\FA25\git1\NguyenNguyenNgu_AS02_PRN212\Business\obj\Debug\net8.0\Business.csproj.AssemblyReference.cache
+E:\FA25\git1\NguyenNguyenNgu_AS02_PRN212\Business\obj\Debug\net8.0\Business.GeneratedMSBuildEditorConfig.editorconfig
+E:\FA25\git1\NguyenNguyenNgu_AS02_PRN212\Business\obj\Debug\net8.0\Business.AssemblyInfoInputs.cache
+E:\FA25\git1\NguyenNguyenNgu_AS02_PRN212\Business\obj\Debug\net8.0\Business.AssemblyInfo.cs
+E:\FA25\git1\NguyenNguyenNgu_AS02_PRN212\Business\obj\Debug\net8.0\Business.csproj.CoreCompileInputs.cache
+E:\FA25\git1\NguyenNguyenNgu_AS02_PRN212\Business\obj\Debug\net8.0\Business.sourcelink.json
+E:\FA25\git1\NguyenNguyenNgu_AS02_PRN212\Business\obj\Debug\net8.0\Business.csproj.Up2Date
+E:\FA25\git1\NguyenNguyenNgu_AS02_PRN212\Business\obj\Debug\net8.0\Business.dll
+E:\FA25\git1\NguyenNguyenNgu_AS02_PRN212\Business\obj\Debug\net8.0\refint\Business.dll
+E:\FA25\git1\NguyenNguyenNgu_AS02_PRN212\Business\obj\Debug\net8.0\Business.pdb
+E:\FA25\git1\NguyenNguyenNgu_AS02_PRN212\Business\obj\Debug\net8.0\ref\Business.dll

@@ -1,0 +1,277 @@
+﻿<UserControl x:Class="NguyenNguyenNguWPF.Views.DashboardView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="800"
+             Background="#1A1B1F">
+    <UserControl.Resources>
+
+        <Color x:Key="HotelPrimaryColor">#0E0F12</Color>
+        <SolidColorBrush x:Key="HotelPrimaryBrush" Color="{StaticResource HotelPrimaryColor}"/>
+
+        <Color x:Key="HotelAccentColor">#D4AF37</Color>
+        <SolidColorBrush x:Key="HotelAccentBrush" Color="{StaticResource HotelAccentColor}"/>
+
+        <Color x:Key="HotelHighlightColor">#00B2A9</Color>
+        <SolidColorBrush x:Key="HotelHighlightBrush" Color="{StaticResource HotelHighlightColor}"/>
+
+        <Color x:Key="HotelForegroundColor">#E0E0E0</Color>
+        <SolidColorBrush x:Key="HotelForegroundBrush" Color="{StaticResource HotelForegroundColor}"/>
+
+        <Color x:Key="HotelDisabledColor">#555555</Color>
+        <SolidColorBrush x:Key="HotelDisabledBrush" Color="{StaticResource HotelDisabledColor}"/>
+
+        <Color x:Key="HotelBorderColor">#333333</Color>
+        <SolidColorBrush x:Key="HotelBorderBrush" Color="{StaticResource HotelBorderColor}"/>
+
+        <Color x:Key="HotelGlassPanelColor">#202125</Color>
+        <SolidColorBrush x:Key="HotelGlassPanelBrush" Color="{StaticResource HotelGlassPanelColor}"/>
+
+        <CornerRadius x:Key="HotelCornerRadius">12</CornerRadius>
+        <CornerRadius x:Key="HotelSmallCornerRadius">6</CornerRadius>
+
+        <DropShadowEffect x:Key="HotelSoftShadow"
+                          Color="#000000"
+                          Direction="270"
+                          ShadowDepth="5"
+                          BlurRadius="10"
+                          Opacity="0.4"/>
+
+        <Style TargetType="{x:Type TextBlock}">
+            <Setter Property="Foreground" Value="{StaticResource HotelForegroundBrush}"/>
+        </Style>
+
+        <Style x:Key="HotelButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="{StaticResource HotelHighlightBrush}"/>
+            <Setter Property="Foreground" Value="{StaticResource HotelPrimaryBrush}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="15,8"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Effect" Value="{StaticResource HotelSoftShadow}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="{StaticResource HotelSmallCornerRadius}"
+                                Padding="{TemplateBinding Padding}"
+                                Effect="{TemplateBinding Effect}"
+                                x:Name="ButtonBorder">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="ButtonBorder" Property="Background" Value="{StaticResource HotelAccentBrush}"/>
+                                <Setter Property="Foreground" Value="{StaticResource HotelPrimaryBrush}"/>
+                                <Setter TargetName="ButtonBorder" Property="Effect">
+                                    <Setter.Value>
+                                        <DropShadowEffect Color="{StaticResource HotelAccentColor}" Direction="270" ShadowDepth="8" BlurRadius="15" Opacity="0.6"/>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="ButtonBorder" Property="Background" Value="{StaticResource HotelAccentBrush}"/>
+                                <Setter TargetName="ButtonBorder" Property="Effect">
+                                    <Setter.Value>
+                                        <DropShadowEffect Color="{StaticResource HotelAccentColor}" Direction="270" ShadowDepth="2" BlurRadius="5" Opacity="0.8"/>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter TargetName="ButtonBorder" Property="Background" Value="{StaticResource HotelDisabledBrush}"/>
+                                <Setter Property="Foreground" Value="{StaticResource HotelBorderBrush}"/>
+                                <Setter TargetName="ButtonBorder" Property="Effect" Value="{x:Null}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="CardStyle" TargetType="Border">
+            <Setter Property="CornerRadius" Value="{StaticResource HotelCornerRadius}"/>
+            <Setter Property="Padding" Value="20"/>
+            <Setter Property="Margin" Value="0,0,12,12"/>
+            <Setter Property="Background" Value="{StaticResource HotelGlassPanelBrush}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource HotelBorderBrush}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Effect" Value="{StaticResource HotelSoftShadow}"/>
+        </Style>
+
+        <Style x:Key="HotelDatePickerStyle" TargetType="DatePicker">
+            <Setter Property="Background" Value="{StaticResource HotelGlassPanelBrush}"/>
+            <Setter Property="Foreground" Value="{StaticResource HotelForegroundBrush}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource HotelBorderBrush}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="10,8"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type DatePicker}">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="{StaticResource HotelSmallCornerRadius}">
+                            <Grid>
+                                <DatePickerTextBox x:Name="PART_TextBox"
+                                                   VerticalAlignment="Center"
+                                                   Padding="{TemplateBinding Padding}"
+                                                   BorderThickness="0"
+                                                   Background="Transparent"
+                                                   Foreground="{TemplateBinding Foreground}"/>
+
+                                <ToggleButton x:Name="PART_Button"
+                                              HorizontalAlignment="Right"
+                                              VerticalContentAlignment="Center"
+                                              Width="30"
+                                              Foreground="{StaticResource HotelHighlightBrush}"
+                                              Background="Transparent"
+                                              BorderThickness="0"
+                                              Cursor="Hand"
+                                              Content="📅" 
+                                              IsChecked="{Binding Path=IsDropDownOpen, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}" />
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="HotelDataGridColumnHeaderStyle" TargetType="DataGridColumnHeader">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="{StaticResource HotelAccentBrush}"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="BorderThickness" Value="0,0,0,2"/>
+            <Setter Property="BorderBrush" Value="{StaticResource HotelBorderBrush}"/>
+            <Setter Property="Padding" Value="10,8"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        </Style>
+
+        <Style x:Key="HotelDataGridCellStyle" TargetType="DataGridCell">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="{StaticResource HotelForegroundBrush}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="10,8"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type DataGridCell}">
+                        <Border Padding="{TemplateBinding Padding}" 
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding BorderThickness}" 
+                                Background="{TemplateBinding Background}" 
+                                SnapsToDevicePixels="True">
+                            <ContentPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="Background" Value="{StaticResource HotelHighlightBrush}"/>
+                    <Setter Property="Foreground" Value="{StaticResource HotelPrimaryBrush}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="HotelDataGridRowStyle" TargetType="DataGridRow">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="{StaticResource HotelBorderBrush}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="HotelDataGridStyle" TargetType="DataGrid">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="RowBackground" Value="Transparent"/>
+            <Setter Property="AlternatingRowBackground" Value="Transparent"/>
+            <Setter Property="GridLinesVisibility" Value="None"/>
+            <Setter Property="CanUserAddRows" Value="False"/>
+            <Setter Property="IsReadOnly" Value="True"/>
+            <Setter Property="AutoGenerateColumns" Value="False"/>
+            <Setter Property="ColumnHeaderStyle" Value="{StaticResource HotelDataGridColumnHeaderStyle}"/>
+            <Setter Property="CellStyle" Value="{StaticResource HotelDataGridCellStyle}"/>
+            <Setter Property="RowStyle" Value="{StaticResource HotelDataGridRowStyle}"/>
+        </Style>
+
+    </UserControl.Resources>
+
+    <Grid Margin="12">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="0,0,0,12">
+            <TextBlock Text="From:" VerticalAlignment="Center" Margin="0,0,6,0" Foreground="{StaticResource HotelForegroundBrush}"/>
+            <DatePicker SelectedDate="{Binding FromDate}" Width="150" Margin="0,0,12,0" Style="{StaticResource HotelDatePickerStyle}"/>
+            <TextBlock Text="To:" VerticalAlignment="Center" Margin="0,0,6,0" Foreground="{StaticResource HotelForegroundBrush}"/>
+            <DatePicker SelectedDate="{Binding ToDate}" Width="150" Margin="0,0,12,0" Style="{StaticResource HotelDatePickerStyle}"/>
+
+            <Button Content="Reload" Command="{Binding LoadCommand}" Width="104" 
+                    Style="{StaticResource HotelButtonStyle}"
+                    Background="{StaticResource HotelHighlightBrush}" 
+                    Foreground="{StaticResource HotelPrimaryBrush}"/>
+        </StackPanel>
+
+        <UniformGrid Columns="4" Grid.Row="1" Margin="0,0,0,12">
+            <Border Style="{StaticResource CardStyle}">
+                <StackPanel>
+                    <TextBlock Text="Total Customers" Foreground="{StaticResource HotelHighlightBrush}" FontWeight="SemiBold"/>
+                    <TextBlock Text="{Binding TotalCustomers}" FontSize="28" FontWeight="Bold" Foreground="{StaticResource HotelAccentBrush}" Margin="0,5,0,0"/>
+                </StackPanel>
+            </Border>
+            <Border Style="{StaticResource CardStyle}">
+                <StackPanel>
+                    <TextBlock Text="Rooms Available (now)" Foreground="{StaticResource HotelHighlightBrush}" FontWeight="SemiBold"/>
+                    <TextBlock Text="{Binding RoomsAvailable}" FontSize="28" FontWeight="Bold" Foreground="{StaticResource HotelAccentBrush}" Margin="0,5,0,0"/>
+                </StackPanel>
+            </Border>
+            <Border Style="{StaticResource CardStyle}">
+                <StackPanel>
+                    <TextBlock Text="Bookings Today" Foreground="{StaticResource HotelHighlightBrush}" FontWeight="SemiBold"/>
+                    <TextBlock Text="{Binding BookingsToday}" FontSize="28" FontWeight="Bold" Foreground="{StaticResource HotelAccentBrush}" Margin="0,5,0,0"/>
+                </StackPanel>
+            </Border>
+            <Border Style="{StaticResource CardStyle}">
+                <StackPanel>
+                    <TextBlock Text="Revenue (period)" Foreground="{StaticResource HotelHighlightBrush}" FontWeight="SemiBold"/>
+                    <TextBlock Text="{Binding RevenuePeriod, StringFormat={}{0:C}}" FontSize="28" FontWeight="Bold" Foreground="{StaticResource HotelAccentBrush}" Margin="0,5,0,0"/>
+                </StackPanel>
+            </Border>
+        </UniformGrid>
+
+        <Border Style="{StaticResource CardStyle}" Grid.Row="2" Margin="0,0,12,12">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="Recent Reservations" 
+                           FontWeight="SemiBold" FontSize="18" 
+                           Foreground="{StaticResource HotelAccentBrush}"
+                           Margin="0,0,0,15"/>
+
+                <DataGrid Grid.Row="1" ItemsSource="{Binding RecentReservations}"
+                          Style="{StaticResource HotelDataGridStyle}">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID" Binding="{Binding BookingReservationID}" Width="80"/>
+                        <DataGridTextColumn Header="Date" Binding="{Binding BookingDate, StringFormat='{}{0:d}'}" Width="120"/>
+                        <DataGridTextColumn Header="Customer" Binding="{Binding CustomerName}" Width="*"/>
+                        <DataGridTextColumn Header="Total" Binding="{Binding TotalPrice, StringFormat={}{0:C}}" Width="120"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

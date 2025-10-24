@@ -1,0 +1,135 @@
+﻿<UserControl x:Class="NguyenNguyenNguWPF.Views.ProfileView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="900"
+             Background="{DynamicResource HotelPrimaryBrush}">
+
+    <UserControl.Resources>
+        <Style x:Key="HotelLabelStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="{DynamicResource HotelAccentBrush}"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+        </Style>
+
+        <Style x:Key="HotelDatePickerStyle" TargetType="DatePicker">
+            <Setter Property="Background" Value="#FF3E3E42"/>
+            <Setter Property="Foreground" Value="{DynamicResource HotelForegroundBrush}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Height" Value="45"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="8,0"/>
+        </Style>
+
+        <Style x:Key="SaveButtonStyle" TargetType="Button" BasedOn="{StaticResource HotelButtonStyle}">
+            <Setter Property="Background" Value="{DynamicResource HotelHighlightBrush}"/>
+            <Setter Property="Foreground" Value="{DynamicResource HotelPrimaryBrush}"/>
+            <Setter Property="Width" Value="120"/>
+            <Setter Property="Height" Value="45"/>
+        </Style>
+
+        <Style x:Key="HotelDataGridColumnHeaderStyle" TargetType="DataGridColumnHeader" BasedOn="{StaticResource {x:Type DataGridColumnHeader}}">
+            <Setter Property="Foreground" Value="{DynamicResource HotelAccentBrush}"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="BorderThickness" Value="0,0,0,2"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource HotelBorderBrush}"/>
+            <Setter Property="Padding" Value="10,12"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        </Style>
+
+        <Style x:Key="HotelDataGridCellStyle" TargetType="DataGridCell" BasedOn="{StaticResource {x:Type DataGridCell}}">
+            <Setter Property="Foreground" Value="{DynamicResource HotelForegroundBrush}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="10,8"/>
+            <Style.Triggers>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="Background" Value="{DynamicResource HotelHighlightBrush}"/>
+                    <Setter Property="Foreground" Value="{DynamicResource HotelPrimaryBrush}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="HotelDataGridStyle" TargetType="DataGrid" BasedOn="{StaticResource {x:Type DataGrid}}">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="RowBackground" Value="Transparent"/>
+            <Setter Property="AlternatingRowBackground" Value="Transparent"/>
+            <Setter Property="GridLinesVisibility" Value="None"/>
+            <Setter Property="CanUserAddRows" Value="False"/>
+            <Setter Property="IsReadOnly" Value="True"/>
+            <Setter Property="AutoGenerateColumns" Value="False"/>
+            <Setter Property="ColumnHeaderStyle" Value="{StaticResource HotelDataGridColumnHeaderStyle}"/>
+            <Setter Property="CellStyle" Value="{StaticResource HotelDataGridCellStyle}"/>
+        </Style>
+
+    </UserControl.Resources>
+
+    <Grid Margin="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Full name" Grid.Row="0" Grid.Column="0" Margin="0,8,20,8" 
+                   Style="{StaticResource HotelLabelStyle}"/>
+        <TextBox Text="{Binding Item.FullName}" Grid.Row="0" Grid.Column="1" Margin="0,4"
+                 Style="{DynamicResource HotelTextBoxStyle}" Height="45" />
+
+        <TextBlock Text="Email" Grid.Row="1" Grid.Column="0" Margin="0,8,20,8"
+                   Style="{StaticResource HotelLabelStyle}"/>
+        <TextBox Text="{Binding Item.Email}" Grid.Row="1" Grid.Column="1" Margin="0,4"
+                 Style="{DynamicResource HotelTextBoxStyle}" Height="45" IsEnabled="False" />
+
+        <TextBlock Text="Telephone" Grid.Row="2" Grid.Column="0" Margin="0,8,20,8"
+                   Style="{StaticResource HotelLabelStyle}"/>
+        <TextBox Text="{Binding Item.Telephone}" Grid.Row="2" Grid.Column="1" Margin="0,4"
+                 Style="{DynamicResource HotelTextBoxStyle}" Height="45" />
+
+        <TextBlock Text="Birthday" Grid.Row="3" Grid.Column="0" Margin="0,8,20,8"
+                   Style="{StaticResource HotelLabelStyle}"/>
+        <DatePicker SelectedDate="{Binding Item.Birthday}" Grid.Row="3" Grid.Column="1" Margin="0,4"
+                    Style="{StaticResource HotelDatePickerStyle}" />
+
+        <TextBlock Text="Booking Count" Grid.Row="4" Grid.Column="0" Margin="0,8,20,8"
+                   Style="{StaticResource HotelLabelStyle}"/>
+        <TextBox Text="{Binding BookingCount}" Grid.Row="4" Grid.Column="1" Margin="0,4"
+                 Style="{DynamicResource HotelTextBoxStyle}" Height="45" 
+                 IsEnabled="False" FontWeight="Bold" />
+
+        <TextBlock Text="BOOKING HISTORY" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" 
+                   Margin="0,20,0,10" 
+                   Style="{StaticResource HotelLabelStyle}" 
+                   FontSize="16"
+                   Foreground="{DynamicResource HotelHighlightBrush}"/>
+
+        <DataGrid Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2"
+                  ItemsSource="{Binding BookingHistoryItems}"
+                  Style="{StaticResource HotelDataGridStyle}"
+                  IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding BookingReservationID}" Width="70"/>
+                <DataGridTextColumn Header="Booking Date" Binding="{Binding BookingDate, StringFormat='{}{0:d}'}" Width="120"/>
+                <DataGridTextColumn Header="Total Price" Binding="{Binding TotalPrice, StringFormat=N0}" Width="120"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Button Content="Save" Grid.Row="7" Grid.Column="1" 
+                HorizontalAlignment="Right" 
+                Command="{Binding SaveCommand}" Margin="0,20,0,0"
+                Style="{StaticResource SaveButtonStyle}"/>
+    </Grid>
+</UserControl>

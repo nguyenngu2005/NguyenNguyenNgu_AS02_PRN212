@@ -1,0 +1,90 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\FA25\\git1\\NguyenNguyenNgu_AS02_PRN212\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C8758A65-D7DB-4C3E-9CA8-12B8DD5EA796}|NguyenNguyenNguWPF\\NguyenNguyenNguWPF.csproj|e:\\fa25\\git1\\nguyennguyenngu_as02_prn212\\nguyennguyennguwpf\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C8758A65-D7DB-4C3E-9CA8-12B8DD5EA796}|NguyenNguyenNguWPF\\NguyenNguyenNguWPF.csproj|solutionrelative:nguyennguyennguwpf\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8758A65-D7DB-4C3E-9CA8-12B8DD5EA796}|NguyenNguyenNguWPF\\NguyenNguyenNguWPF.csproj|e:\\fa25\\git1\\nguyennguyenngu_as02_prn212\\nguyennguyennguwpf\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8758A65-D7DB-4C3E-9CA8-12B8DD5EA796}|NguyenNguyenNguWPF\\NguyenNguyenNguWPF.csproj|solutionrelative:nguyennguyennguwpf\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8758A65-D7DB-4C3E-9CA8-12B8DD5EA796}|NguyenNguyenNguWPF\\NguyenNguyenNguWPF.csproj|e:\\fa25\\git1\\nguyennguyenngu_as02_prn212\\nguyennguyennguwpf\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{C8758A65-D7DB-4C3E-9CA8-12B8DD5EA796}|NguyenNguyenNguWPF\\NguyenNguyenNguWPF.csproj|solutionrelative:nguyennguyennguwpf\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "E:\\FA25\\git1\\NguyenNguyenNgu_AS02_PRN212\\NguyenNguyenNguWPF\\App.xaml.cs",
+              "RelativeDocumentMoniker": "NguyenNguyenNguWPF\\App.xaml.cs",
+              "ToolTip": "E:\\FA25\\git1\\NguyenNguyenNgu_AS02_PRN212\\NguyenNguyenNguWPF\\App.xaml.cs",
+              "RelativeToolTip": "NguyenNguyenNguWPF\\App.xaml.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAgwBwAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-24T16:33:52.948Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\FA25\\git1\\NguyenNguyenNgu_AS02_PRN212\\NguyenNguyenNguWPF\\appsettings.json",
+              "RelativeDocumentMoniker": "NguyenNguyenNguWPF\\appsettings.json",
+              "ToolTip": "E:\\FA25\\git1\\NguyenNguyenNgu_AS02_PRN212\\NguyenNguyenNguWPF\\appsettings.json",
+              "RelativeToolTip": "NguyenNguyenNguWPF\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-24T15:49:34.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "E:\\FA25\\git1\\NguyenNguyenNgu_AS02_PRN212\\NguyenNguyenNguWPF\\Views\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "NguyenNguyenNguWPF\\Views\\MainWindow.xaml",
+              "ToolTip": "E:\\FA25\\git1\\NguyenNguyenNgu_AS02_PRN212\\NguyenNguyenNguWPF\\Views\\MainWindow.xaml",
+              "RelativeToolTip": "NguyenNguyenNguWPF\\Views\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-24T15:42:19.335Z"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
